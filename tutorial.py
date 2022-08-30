@@ -21,7 +21,7 @@ def wrap_text(text, font, max_width):
     # hitung >= max_width -> menambahkan ke list + current line == word ?: current line = temp line
         width = font.getbbox(temp_line)[2]  # x,y,x,y
         if width >= max_width:
-            lines.append(temp_line)
+            lines.append(current_line)
             current_line = ""
         else:
             current_line = temp_line
